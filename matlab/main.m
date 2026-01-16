@@ -66,7 +66,8 @@ end
 
 
 [T,Q,DQ,D2Q] = main_fun;
-% animation(T, Q);
+
+animation(T, Q);
 
 %% -------- SELECT BODY AND LETTER --------
 c = 10;              % body index 7 and 10
@@ -132,6 +133,7 @@ AD_Vy = "x_MARKER_" + m + "_Translational_Velocity_Y";
 AD_Ax = "x_MARKER_" + m + "_Translational_Acceleration_X";
 AD_Ay = "x_MARKER_" + m + "_Translational_Acceleration_Y";
 
+
 %% ================= cm X DIRECTION =================
 figure(1)
 
@@ -180,7 +182,8 @@ grid on
 title('Acceleration Y')
 legend('MATLAB','ADAMS')
 
-
+%% Uncomment this if you want to plot marker points
+%{
 %% ================= letter X DIRECTION =================
 figure(3)
 
@@ -234,3 +237,5 @@ plot(adams_data2.Time, adams_data2.(AD_Ay),'b--','LineWidth',1.5)
 grid on
 title('Acceleration X')
 legend('MATLAB','ADAMS')
+
+%}
