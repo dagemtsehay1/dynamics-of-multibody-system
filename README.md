@@ -20,6 +20,8 @@ This project implements a kinematic analysis program for a multibody mechanism u
 ## Project Structure
 
 ```
+Adams/
+├── Homework.cmd        # ADAMS Database
 matlab/
 ├── main.m              # Main execution script
 ├── parameters.m        # System parameters and constants
@@ -34,7 +36,7 @@ matlab/
 ├── animation.m         # Mechanism animation/visualization
 └── Adams/              # ADAMS database and reference data
     ├── c1.csv - c10.csv  # Comparison data from ADAMS
-report/
+Report/
 └── Report.pdf          # Complete project documentation and results
 ```
 
@@ -110,6 +112,10 @@ The program generates:
    - Singularity warnings (if detected)
    - Execution status
 3. **Animation** of mechanism motion (if enabled)
+
+### Plotting Markers
+
+To visualize marker points on the plots, uncomment the code block starting from **line 185** in `main.m`. This section contains additional plotting routines for letter X, Y, and Z directions with marker positions.
 
 ## Simulation Animations
 
