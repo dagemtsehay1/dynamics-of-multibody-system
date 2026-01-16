@@ -1,4 +1,4 @@
-# Computational Project: Kinematic Analysis of Multibody System
+# Computational Project: Kinematic Analysis of Multibody System 
 
 ## Project Overview
 
@@ -108,7 +108,6 @@ Edit `constants.m` to modify:
 The program generates:
 1. **Plots** of positions, velocities, and accelerations for key points (e.g., ci, A, B, K)
 2. **Console output** showing:
-   - Convergence information at each time step
    - Singularity warnings (if detected)
    - Execution status
 3. **Animation** of mechanism motion (if enabled)
@@ -117,19 +116,6 @@ The program generates:
 
 To visualize marker points on the plots, uncomment the code block starting from **line 185** in `main.m`. This section contains additional plotting routines for letter X, Y, and Z directions with marker positions.
 
-## Simulation Animations
-
-### ADAMS Simulation
-
-![ADAMS Simulation](path/to/adams-simulation.gif)
-
-*ADAMS model animation showing the mechanism in motion*
-
-### MATLAB Simulation
-
-![MATLAB Simulation](path/to/matlab-simulation.gif)
-
-*MATLAB program animation showing the mechanism in motion*
 
 ## Documentation
 
@@ -139,7 +125,7 @@ A comprehensive project report is available in `report/Report.pdf`, which includ
 - MATLAB procedures documentation
 - Results demonstration and visualization
 - Comparison between ADAMS and MATLAB results
-- Conclusions and analysis
+- Conclusions
 
 ## Validation
 
@@ -149,45 +135,14 @@ Results are validated against ADAMS simulation data stored in `Adams/` directory
 
 ## Requirements
 
-- MATLAB R2018b or later (recommended)
+- MATLAB
 - No additional toolboxes required
+- ADAMS View
 
-## Technical Details
-
-### Singularity Detection
-
-The program monitors the condition number of the Jacobian matrix at each time step:
-- If `cond(Φq) > threshold`, a singularity warning is issued
-- Analysis continues but results near singularities may be less accurate
-
-### Convergence Criteria
-
-Newton-Raphson iteration stops when:
-- `||Φ(q)|| < tolerance` (default: 1e-6), or
-- Maximum iterations reached (default: 50)
-
-## Troubleshooting
-
-**Issue:** Convergence problems  
-**Solution:** 
-- Reduce time step h
-- Adjust initial conditions closer to equilibrium
-- Check actuator parameters for feasible motion
-
-**Issue:** Singularity warnings  
-**Solution:**
-- Review mechanism configuration at problematic time instances
-- Check if mechanism reaches dead-point positions
-- Consider modifying actuator motion parameters
 
 ## References
 
 - Course materials: Examples 5.1 – 5.5
-- Demo program for kinematic analysis (provided)
-
-## Contact
-
-For technical questions, contact: mgr inż. Maciej Pikuliński
 
 ---
 
